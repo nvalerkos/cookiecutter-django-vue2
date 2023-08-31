@@ -75,6 +75,9 @@ Project creation will cause some odd newlines and linter errors, so I'd recommen
     $ pip install autopep8
     $ autopep8 -r --in-place --aggressive --aggressive backend
     $ cd frontend && npm i && npm run lint --fix
+    $ docker compose run backend python manage.py makemigrations
+    $ docker compose run backend python manage.py migrate
+    $ docker compose run backend python manage.py createsuperuser
 
 Now you can start project with
 [docker-compose](https://docs.docker.com/compose/):
